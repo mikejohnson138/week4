@@ -1,0 +1,164 @@
+1) Problem 1: Karel the Robot :
+public void run() {
+		move();
+		turnLeft();
+		move();
+		putBeeper();
+		move();
+		putBeeper();
+		move();
+		putBeeper();
+		move();
+		putBeeper();
+		move();
+		putBeeper();
+		move();
+		putBeeper();
+		move();
+		putBeeper();
+		turnRight();
+		move();
+		putBeeper();
+		move();
+		putBeeper();
+		move();
+		putBeeper();
+		move();
+		putBeeper();
+		move();
+		putBeeper();
+		move();
+		putBeeper();
+		turnRight();
+		move();
+		putBeeper();
+		move();
+		putBeeper();
+		move();
+		putBeeper();
+		move();
+		putBeeper();
+		move();
+		putBeeper();
+		move();
+		putBeeper();
+		turnRight();
+		move();
+		putBeeper();
+		move();
+		putBeeper();
+		move();
+		putBeeper();
+		move();
+		putBeeper();
+		move();
+		putBeeper();
+		move();
+		move();
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+
+}
+2A) 1.25, false, "B84",
+2B) 1st number= 78
+    2nd number= 73
+3)
+
+public class SecondLargest extends ConsoleProgram {
+private static int SENTINEL = 0;
+public void run() {
+	println("This program finds the two largest intergers of a list Enter one number per line, use a 0 to end the list");
+	int largest = -1;
+	int secondLargest = -1;
+	while (true) {
+		int input = readInt(" ? ");
+		if (input == SENTINEL) break;
+		if (input > largest) {
+			secondLargest = largest;
+			largest = input;
+		}else if (input> secondLargest) {
+			secondLargest = input;
+		}
+	}
+	println("The largest value is " + largest);
+	println("The second largest is " + secondLargest);
+
+	}
+}
+
+4) 
+
+public class SimpleFrogger extends GraphicsProgram {
+public void init() {
+frog = new GImage("frog.gif");
+fx = (NCOLUMNS / 2 + 0.5) * SQUARE_SIZE;
+fy = (NROWS - 0.5) * SQUARE_SIZE;add(frog, fx - frog.getWidth() / 2,fy - frog.getHeight() / 2);
+addMouseListeners();
+}
+/* Responds to mouse click */
+public void mouseClicked(MouseEvent e){
+double mx = e.getX();
+double my = e.getY();
+if (Math.abs(mx > fx){
+if *mx > fx) {
+	moveFrog(Square_Size 0);
+else{
+	if(my>fy){
+	moveFrog(0, SQUARE_SIZE);
+}else{
+if (my> fy){
+moveFrog(0, SQUARE_SIZE);
+}else{
+	moveFrog(0, -SQUARE_SIZE);
+	}
+     }
+}
+
+/* Moves to frog by dx/dy*/
+private void moveFrog(double dx, double dy){
+if(inFroggerLand(fx + dx, fy + dy)){
+fx += dx;
+fy +=dy;
+frog.move(dx, dy);
+	}
+}
+
+/* Return true if the the point is inside Frogger Land*/
+private boolean inFroggerLand(double x, double y){
+return (x>=0 && x <= NCOLUMS * SQUARE_SIZE &&
+	y>=0 && y <= NROWS * SQUARE_SIZE);
+}
+
+/* Private constants */
+private static final int SQUARE_SIZE = 75;
+private static final int NROWS = 4;
+private static final int NCOLUMS = 7;
+
+/* Private instance variables */
+private GImage frog; 
+private double fx;
+private double fy;
+
+/* Sets the graphics window size */
+public static final int APPLICATION_WIDTH = NCOLUMS * SQUARE_SIZE;
+public static final int APPLICATION_HEIGHT = NROWS * SQAURE_SIZE;
+}
+
+5) private String removeDuplicates(String str){
+	String result = "";
+	for (int i = 0; i < str.length(); i++){
+		char ch = str.charAt(i);
+		if (i == 0 || ch != str.charAt(i-1)) {
+			result +=ch;
+		}
+	}
+	return result;
+}
